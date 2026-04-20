@@ -17,7 +17,7 @@ Style is configurable: Tailwind CSS (default), Bootstrap, or unstyled.
 ## Installation
 
 ```bash
-composer require yourvendor/laravel-decimal-input
+composer require francescobruno-cmv/laravel-decimal-input
 ```
 
 The service provider is auto-discovered. No manual registration needed.
