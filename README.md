@@ -1,59 +1,75 @@
-# laravel-decimal-input
+# Laravel Decimal Input
 
-A reusable Blade component for decimal number inputs with Alpine.js keyboard/paste filtering.  
-Supports classic Laravel forms (`name`), Livewire (`wire:model`), and Livewire live binding (`wire:model.live`).  
-Style is configurable: Tailwind CSS (default), Bootstrap, or unstyled.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/francescobruno-cmv/laravel-decimal-input.svg?style=flat-square)](https://packagist.org/packages/francescobruno-cmv/laravel-decimal-input)
+[![Total Downloads](https://img.shields.io/packagist/dt/francescobruno-cmv/laravel-decimal-input.svg?style=flat-square)](https://packagist.org/packages/francescobruno-cmv/laravel-decimal-input)
+[![License](https://img.shields.io/packagist/l/francescobruno-cmv/laravel-decimal-input.svg?style=flat-square)](LICENSE.md)
 
----
-
-## Requirements
-
-- PHP 8.1+
-- Laravel 10 / 11 / 12
-- Alpine.js loaded in your layout (CDN or via npm)
+Un componente Blade riutilizzabile per input numerici decimali con **Alpine.js** per il filtraggio da tastiera e da incolla.  
+Compatibile con i form Laravel classici (`name`), **Livewire** (`wire:model`) e il binding reattivo **Livewire live** (`wire:model.live`).  
+Lo stile è configurabile: **Tailwind CSS** (default), **Bootstrap**, o senza stile.
 
 ---
 
-## Installation
+## ✨ Features
+
+- ✅ Componente Blade pronto all'uso, zero configurazione obbligatoria
+- 🎯 Compatibile con Laravel 10, 11 e 12
+- ⚡ Integrazione nativa con **Livewire 3** (`wire:model` e `wire:model.live`)
+- 🎨 Tre stili inclusi: **Tailwind CSS**, **Bootstrap**, o **unstyled**
+- 🔢 Separatori decimali e delle migliaia configurabili (formato IT/EU e US/UK)
+- ⌨️ Filtraggio input da tastiera e da incolla tramite **Alpine.js**
+- 🔧 Config pubblicabile e viste personalizzabili
+
+---
+
+## 📦 Installazione
+
+Installa il pacchetto tramite Composer:
 
 ```bash
 composer require francescobruno-cmv/laravel-decimal-input
 ```
 
-The service provider is auto-discovered. No manual registration needed.
+Il service provider viene registrato automaticamente. Nessuna configurazione manuale necessaria.
 
-### Publish config (optional)
+### Pubblica la configurazione (opzionale)
 
 ```bash
 php artisan vendor:publish --tag=decimal-input-config
 ```
 
-### Publish views for customisation (optional)
+### Pubblica le viste per personalizzarle (opzionale)
 
 ```bash
 php artisan vendor:publish --tag=decimal-input-views
 ```
 
+## ⚙️ Requisiti
+
+- PHP >= 8.1
+- Laravel 10 / 11 / 12
+- Alpine.js caricato nel layout (CDN o via npm)
+
 ---
 
-## Configuration
+## ⚙️ Configurazione
 
-`config/decimal-input.php` (after publishing):
+`config/decimal-input.php` (dopo la pubblicazione):
 
 ```php
 return [
     'style'               => 'tailwind',   // 'tailwind' | 'bootstrap' | 'none'
     'decimals'            => 2,
-    'decimal_separator'   => ',',          // Italian/EU: ','  —  US/UK: '.'
-    'thousands_separator' => '.',          // Italian/EU: '.'  —  US/UK: ','
+    'decimal_separator'   => ',',          // IT/EU: ','  —  US/UK: '.'
+    'thousands_separator' => '.',          // IT/EU: '.'  —  US/UK: ','
 ];
 ```
 
 ---
 
-## Usage
+## 🚀 Utilizzo
 
-### Classic Laravel form (name + value)
+### Form Laravel classico (`name` + `value`)
 
 ```blade
 <x-decimal-input
@@ -81,35 +97,35 @@ return [
 
 ---
 
-## All Props
+## 📋 Props disponibili
 
-| Prop            | Type            | Default        | Description |
-|-----------------|-----------------|----------------|-------------|
-| `name`          | `string\|null`  | `null`         | HTML `name` attribute — use for classic forms |
-| `model`         | `string\|null`  | `null`         | Livewire property name for `wire:model` |
-| `live`          | `bool`          | `false`        | Use `wire:model.live` instead of `wire:model` |
-| `value`         | `mixed`         | `null`         | Initial display value (only for `name` mode) |
-| `decimals`      | `int`           | config (2)     | Number of decimal digits |
-| `decimalSep`    | `string`        | config (`,`)   | Decimal separator character |
-| `thousandsSep`  | `string`        | config (`.`)   | Thousands separator character |
-| `style`         | `string\|null`  | config (`tailwind`) | `'tailwind'` \| `'bootstrap'` \| `'none'` |
-| `class`         | `string\|null`  | `null`         | Extra CSS classes merged with base classes |
-| `id`            | `string\|null`  | `null`         | HTML `id` attribute |
-| `required`      | `bool`          | `false`        | Adds `required` attribute |
-| `disabled`      | `bool`          | `false`        | Adds `disabled` attribute |
-| `placeholder`   | `string\|null`  | `null`         | Placeholder text |
+| Prop | Tipo | Default | Descrizione |
+|---|---|---|---|
+| `name` | `string\|null` | `null` | Attributo HTML `name` — per form classici |
+| `model` | `string\|null` | `null` | Nome della proprietà Livewire per `wire:model` |
+| `live` | `bool` | `false` | Usa `wire:model.live` al posto di `wire:model` |
+| `value` | `mixed` | `null` | Valore iniziale (solo in modalità `name`) |
+| `decimals` | `int` | config (2) | Numero di cifre decimali |
+| `decimalSep` | `string` | config (`,`) | Separatore decimale |
+| `thousandsSep` | `string` | config (`.`) | Separatore delle migliaia |
+| `style` | `string\|null` | config (`tailwind`) | `'tailwind'` \| `'bootstrap'` \| `'none'` |
+| `class` | `string\|null` | `null` | Classi CSS aggiuntive |
+| `id` | `string\|null` | `null` | Attributo HTML `id` |
+| `required` | `bool` | `false` | Aggiunge l'attributo `required` |
+| `disabled` | `bool` | `false` | Aggiunge l'attributo `disabled` |
+| `placeholder` | `string\|null` | `null` | Testo placeholder |
 
 ---
 
-## Examples
+## 📝 Esempi
 
-### Bootstrap style
+### Stile Bootstrap
 
 ```blade
 <x-decimal-input name="importo" :value="1234.50" style="bootstrap" />
 ```
 
-### Unstyled (bring your own classes)
+### Senza stile (classi personalizzate)
 
 ```blade
 <x-decimal-input
@@ -119,7 +135,7 @@ return [
 />
 ```
 
-### Override separators per-component (US style)
+### Separatori in formato US per componente
 
 ```blade
 <x-decimal-input
@@ -130,7 +146,7 @@ return [
 />
 ```
 
-### Livewire with extra attributes
+### Livewire con attributi aggiuntivi
 
 ```blade
 <x-decimal-input
@@ -146,6 +162,31 @@ return [
 
 ---
 
-## License
+## 🤝 Contributi
 
-MIT
+Le contribuzioni sono benvenute!
+
+1. Fai fork del progetto
+2. Crea un branch (`feature/nome-feature`)
+3. Commit delle modifiche
+4. Push sul branch
+5. Apri una Pull Request
+
+---
+
+## 📄 Licenza
+
+Questo pacchetto è distribuito sotto licenza MIT.  
+Vedi il file `LICENSE.md` per maggiori dettagli.
+
+---
+
+## 👤 Autore
+
+**Francesco Bruno**
+
+---
+
+## ⭐ Supporto
+
+Se il pacchetto ti è utile, lascia una ⭐ su GitHub!
