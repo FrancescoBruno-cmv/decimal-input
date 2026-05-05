@@ -1,8 +1,8 @@
-# Laravel Decimal Input
+# Decimal Input
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/francescobruno-cmv/laravel-decimal-input.svg?style=flat-square)](https://packagist.org/packages/francescobruno-cmv/laravel-decimal-input)
-[![Total Downloads](https://img.shields.io/packagist/dt/francescobruno-cmv/laravel-decimal-input.svg?style=flat-square)](https://packagist.org/packages/francescobruno-cmv/laravel-decimal-input)
-[![License](https://img.shields.io/packagist/l/francescobruno-cmv/laravel-decimal-input.svg?style=flat-square)](LICENSE.md)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/francescobruno-cmv/decimal-input.svg?style=flat-square)](https://packagist.org/packages/francescobruno-cmv/decimal-input)
+[![Total Downloads](https://img.shields.io/packagist/dt/francescobruno-cmv/decimal-input.svg?style=flat-square)](https://packagist.org/packages/francescobruno-cmv/decimal-input)
+[![License](https://img.shields.io/packagist/l/francescobruno-cmv/decimal-input.svg?style=flat-square)](LICENSE.md)
 
 Un componente Blade riutilizzabile per input numerici decimali con **Alpine.js** per il filtraggio da tastiera e da incolla.  
 Compatibile con i form Laravel classici (`name`), **Livewire** (`wire:model`) e il binding reattivo **Livewire live** (`wire:model.live`).  
