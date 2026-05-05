@@ -4,6 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/francescobruno-cmv/decimal-input.svg?style=flat-square)](https://packagist.org/packages/francescobruno-cmv/decimal-input)
 [![License](https://img.shields.io/packagist/l/francescobruno-cmv/decimal-input.svg?style=flat-square)](LICENSE.md)
 
+
 Un componente Blade riutilizzabile per input numerici decimali con **Alpine.js** per il filtraggio da tastiera e da incolla.  
 Compatibile con i form Laravel classici (`name`), **Livewire** (`wire:model`) e il binding reattivo **Livewire live** (`wire:model.live`).  
 Lo stile è configurabile: **Tailwind CSS** (default), **Bootstrap**, o senza stile.
